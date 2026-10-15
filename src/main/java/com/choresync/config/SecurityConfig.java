@@ -1,4 +1,4 @@
-```java
+
 package com.choresync.config;
 
 import org.springframework.context.annotation.Bean;
