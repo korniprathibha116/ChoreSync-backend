@@ -52,12 +52,14 @@ public class SecurityConfig {
 
             .authorizeHttpRequests(auth -> auth
                 .requestMatchers(HttpMethod.OPTIONS, "/**").permitAll()
-                .requestMatchers(
-                    "/",
-                    "/api/health",
-                    "/api/auth/register",
-                    "/api/auth/login"
-                ).permitAll()
+               .requestMatchers(
+    "/",
+    "/api/health",
+    "/api/auth/register",
+    "/api/auth/login",
+    "/api/auth/me",
+    "/api/auth/logout"
+).permitAll()
                 .anyRequest().authenticated()
             )
 
